@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="RowaPickupMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:RowaPickupMAUI"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Rowa Pickup View">
+    <ShellItem Title="Bediening" Icon="service.png">
+        <ShellContent 
+                      ContentTemplate="{DataTemplate local:MainPage}" 
+                      Route="MainPage"/>
+
+    </ShellItem>
+
+    <FlyoutItem Title="Instellingen" Icon="settings.png">
+        <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" 
+                      Route="SettingsPage"/>
+    </FlyoutItem>
+    <MenuItem Text="Voorraad Verversen" IconImageSource="refresh.png" Clicked="OnMenuItemClicked" />
+
+</Shell>

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="RowaPickupSlim/RowaPickupSlim.vcxproj" Id="a729b9a1-34a9-4b39-9a81-68b12652c4f2" />
+</Solution>

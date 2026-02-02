@@ -1,0 +1,46 @@
+/*
+* RowaPickupSlim - Lightweight Windows C++ WWKS Client
+* 
+* Copyright (c) 2024 Vincent Voois
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * PROJECT OVERVIEW
+ * ================
+ * RowaPickupSlim is a native Windows GDI application that replaces a MAUI
+ * cross-platform app for warehouse robot picking operations. It communicates
+ * with Baxter Rowa automation systems via WWKS 2.0 protocol over TCP/XML.
+ * 
+ * ARCHITECTURE
+ * ============
+ * - Modular design with headers declaring contracts, main.cpp implementing
+ * - NetworkClient class handles TCP/WWKS protocol with auto-reconnection
+ * - GDI-based UI with custom scrollbar and real-time search
+ * - Thread-safe global state with mutex protection
+ * - Multi-language support (English & Dutch)
+ * - Comprehensive audit logging to C:\ProgramData\RowaPickup\Protocol\
+ * 
+ * BUILD
+ * =====
+ * Visual Studio 2022 | Windows SDK 10.0+ | C++17
+ * 
+ * BUILD: msbuild RowaPickupSlim.sln /p:Configuration=Release /p:Platform=x64
+ * 
+ * CONFIGURATION
+ * =============
+ * Settings loaded from: C:\ProgramData\RowaPickup\RowaPickupMaui.config
+ * Format: INI with sections [Connection], [UI], [Security]
+ * 
+ * See README.md for full documentation.
+ */

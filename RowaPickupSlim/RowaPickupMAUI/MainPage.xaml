@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RowaPickupMAUI"
+             x:Class="RowaPickupMAUI.MainPage">
+
+    <ContentPage.Content>
+        <Grid Margin="1,1,1,1" x:Name="MainContainer" IsVisible="True">
+            <Grid.RowDefinitions>
+                <!-- Row for the Titlebar -->
+                <RowDefinition Height="30"/>
+                <!-- Row for the Header -->
+                <RowDefinition Height="20"/>
+                <!-- Row for the CollectionView -->
+                <RowDefinition Height="*"/>
+                <!-- Row for the Button, TextBox, and TextBlock -->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--Titlebar-->
+            <Grid x:Name="TitleBar" Grid.Row="0" Background="#FF333333" Height="32" Margin="3,3,3,3" VerticalOptions="Start">
+                <Label Text="Niet verbonden" TextColor="White" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,5,0" x:Name="LBConnectionState"/>
+            </Grid>
+            <ScrollView Orientation="Horizontal" Grid.Row="1">
+                <!-- Header -->
+                <Grid x:Name="HeaderGrid" Grid.Row="1" BackgroundColor="#EEE">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="400" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="75" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="2" Text="Artikel" />
+                    <Label Grid.Column="3" Text="Naam" />
+                    <Label Grid.Column="4" Text="Eenheid" />
+                    <Label Grid.Column="5" Text="Vorm" />
+                    <Label Grid.Column="1" Text="Aantal" />
+                    <Label Grid.Column="0" Text="" />
+                </Grid>
+            </ScrollView>
+            <ScrollView Orientation="Horizontal" Grid.Row="2">
+
+                <!-- Content Area -->
+                <!-- CollectionView for Items -->
+                <CollectionView Grid.Row="2" x:Name="myConnectionView" VerticalOptions="FillAndExpand"
+                                SelectionMode="Single"
+                                SelectionChanged="OnCollectionViewSelectionChanged"
+                                ItemsUpdatingScrollMode="KeepScrollOffset"
+                                RemainingItemsThreshold="1" 
+                                RemainingItemsThresholdReached="OnRemainingItemsThresholdReached" 
+                                RemainingItemsThresholdReachedCommand="{Binding LoadMoreDataCommand}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition Width="250" />
+                                    <ColumnDefinition Width="400" />
+                                    <ColumnDefinition Width="75" />
+                                    <ColumnDefinition Width="75" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="2" Text="{Binding Id}" />
+                                <Label Grid.Column="3" Text="{Binding Name}" />
+                                <Label Grid.Column="4" Text="{Binding PackagingUnit}" />
+                                <Label Grid.Column="5" Text="{Binding DosageForm}" />
+                                <Label Grid.Column="1" Text="{Binding Quantity}" />
+                                <Button Grid.Column="0" BackgroundColor="{Binding ButtonColor}" Scale="0.75" FontAutoScalingEnabled="False" FontSize="10" Clicked="OnOutputClicked" Text="Uitladen" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+            <StackLayout Grid.Row="3" Orientation="Horizontal" VerticalOptions="Start" Padding="0">
+                <Label Text="Zoeksleutel" VerticalOptions="Center"  Scale="0.75" FontAutoScalingEnabled="False" FontSize="15"/>
+                <Entry x:Name="SearchPhrase" WidthRequest="500" IsReadOnly="False" TextChanged="SearchPhrase_TextChanged"  VerticalOptions="Center" Scale="0.75" FontAutoScalingEnabled="False" FontSize="15"/>
+                <Button x:Name="SearchButton" Text="Zoek" Clicked="OnSearchClicked" VerticalOptions="Center" Padding="0" Scale="0.75" FontAutoScalingEnabled="False" FontSize="15"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

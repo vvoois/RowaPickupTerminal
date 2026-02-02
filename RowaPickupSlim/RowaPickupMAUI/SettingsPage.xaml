@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RowaPickupMAUI"
+             x:Class="RowaPickupMAUI.SettingsPage">
+    <ContentPage.Content>
+
+        <Grid x:Name="SettingsContainer" IsVisible="True">
+            <Grid Margin="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" LineBreakMode="WordWrap" Text="IP-address" VerticalOptions="Center" IsEnabled="False"/>
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="ClientIpAddress" Text="{Binding ClientIpAddress}" VerticalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="0" LineBreakMode="WordWrap" Text="Port" VerticalOptions="Center"/>
+                <Entry Grid.Row="1" Grid.Column="1" Text="{Binding ClientPort}" x:Name="ClientPort" VerticalOptions="Center" IsEnabled="False"/>
+                <Label Grid.Row="2" Grid.Column="0" LineBreakMode="WordWrap" Text="Stocklocatie" VerticalOptions="Center"/>
+                <Entry Grid.Row="2" Grid.Column="1" Text="{Binding RobotStockLocation}" x:Name="RobotStockLocation" VerticalOptions="Center" IsEnabled="False"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Alleen afhalers?" VerticalOptions="Center"/>
+                <CheckBox  Grid.Row="3" Grid.Column="1" x:Name="PickupsOnly" IsChecked="{Binding PickupsOnly}" CheckedChanged="OnPickupCheckedChanged" VerticalOptions="Center" IsEnabled="False"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Scanuitladen? (Bij voorraad direct !alles! uitleveren)" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <CheckBox  Grid.Row="0" Grid.Column="3" x:Name="ScanOutput" IsChecked="{Binding ScanOutput}" CheckedChanged="OnScanOutputCheckedChanged" VerticalOptions="Center" IsEnabled="False"/>
+                <Label Grid.Row="1" Grid.Column="2" LineBreakMode="WordWrap" Text="Wachttijd tot uitgifte zoekopdracht" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Entry Grid.Row="1" Grid.Column="3" Text="{Binding ReadSpeed}" x:Name="ReadSpeed" VerticalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="4" LineBreakMode="WordWrap" Text="ms" VerticalOptions="Center"/>
+                <Label Grid.Row="2" Grid.Column="2" LineBreakMode="WordWrap" Text="Uitgifte" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Entry Grid.Row="2" Grid.Column="3" Text="{Binding OutputNumber}"  Width="251" x:Name="OutputNumber" VerticalOptions="Center"/>
+                <Label Grid.Row="4" Grid.Column="0" LineBreakMode="WordWrap" Text="Prio" VerticalOptions="Center"/>
+                <Picker Grid.Row="4" Grid.Column="1" x:Name="PrioPicker" SelectedIndex="{Binding PrioPicker}" SelectedItem="{Binding PrioPickerText}" VerticalOptions="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Lowest</x:String>
+                            <x:String>Low</x:String>
+                            <x:String>Normal</x:String>
+                            <x:String>High</x:String>
+                            <x:String>Highest</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Grid.Row="5" Grid.Column="0" LineBreakMode="WordWrap" Text="Service wachtwoord" VerticalOptions="Center"/>
+                <Entry Grid.Row="5" Grid.Column="1" Text="{Binding PassWord}"  IsPassword="True" Width="251" TextChanged="OnPasswordChanged" x:Name="Password" VerticalOptions="Center"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

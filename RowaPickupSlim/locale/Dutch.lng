@@ -1,0 +1,69 @@
+; Dutch.lng - Dutch language strings for RowaPickupSlim
+; Format: KEY=VALUE
+
+; Connection status
+STR_CONNECTED=Verbonden
+STR_NOT_CONNECTED=Niet verbonden
+STR_TITLE_CONNECTED=Verbonden
+STR_DEVICES_TITLE=Apparatuur
+STR_DEVICE_STATE=Status
+STR_MOSAIC_READY=Gereed
+STR_MOSAIC_INACTIVE=Inactief
+
+; UI Controls
+STR_SEARCH_PLACEHOLDER=Zoeken...
+STR_REFRESH_BUTTON=Verversen
+STR_SETTINGS_BUTTON=Instellingen
+STR_OUTPUT_BUTTON=Uitgifte
+STR_EXIT_BUTTON=Afsluiten
+
+; Column headers
+STR_COL_QUANTITY=Aantal
+STR_COL_ARTICLE=Artikel
+
+; Status messages
+STR_OUR_REQUEST_LOADING=Ons request wordt uitgeladen...
+STR_OTHER_REQUEST_LOADING=Ander request wordt uitgeladen...
+STR_PICKER_LOADING=Afhaler wordt uitgeladen...
+STR_PICKER_FAILED=Afhaler kon niet worden uitgeladen
+STR_PICKER_PARTIAL=Uitgeladen
+STR_PICKER_PARTIAL_FULL=Uitgeladen: {0} / {1} verpakkingen
+
+; Dialogs
+STR_CONFIRM_OUTPUT=Uitgifteopdracht voor {0} ({1} verpakkingen) sturen?
+STR_CONFIRM_OUTPUT_TITLE=Bevestiging
+STR_SETTINGS_TITLE=RowaPickup Instellingen
+STR_SETTINGS_SAVED=Instellingen succesvol opgeslagen!
+STR_SETTINGS_SAVED_TITLE=Succes
+STR_NO_ARTICLE_SELECTED=Geen artikel geselecteerd of verpakkingen beschikbaar.
+STR_NO_ARTICLE_INFO=Info
+
+; Settings dialog
+STR_SETTINGS_IP_ADDRESS=IP Adres:
+STR_SETTINGS_PORT=Poort:
+STR_SETTINGS_STOCK_LOCATION=Voorraadlocatie:
+STR_SETTINGS_SCAN_OUTPUT=Barcode scannen inschakelen
+STR_SETTINGS_OUTPUT_NUMBER=Uitgiftenummer:
+STR_SETTINGS_READ_SPEED=Leessnelheid (ms):
+STR_SETTINGS_PRIORITY=Prioriteit:
+STR_SETTINGS_LANGUAGE=Taal:
+STR_SETTINGS_SAVE=Opslaan
+STR_SETTINGS_CLOSE=Sluiten
+
+; Priority options
+STR_PRIORITY_LOWEST=Laagste
+STR_PRIORITY_LOW=Laag
+STR_PRIORITY_NORMAL=Normaal
+STR_PRIORITY_HIGH=Hoog
+STR_PRIORITY_HIGHEST=Hoogste
+
+; Right-click menu
+STR_MENU_SETTINGS=Instellingen
+STR_MENU_OUTPUT_SELECTED=Uitgifte geselecteerde pickup
+STR_MENU_REFRESH_STOCK=Voorraad verversen
+STR_MENU_EXIT=Afsluiten
+
+; File menu
+STR_FILE_MENU=Bestand
+STR_FILE_SETTINGS=&Instellingen
+STR_FILE_EXIT=&Afsluiten

@@ -1,0 +1,58 @@
+# Visual Studio
+.vs/
+*.sln.DotSettings
+*.user
+*.ncb
+*.suo
+*.vcxproj.user
+
+# Build output
+x64/
+Win32/
+Debug/
+Release/
+bin/
+obj/
+*.o
+*.a
+*.lib
+*.exe
+*.dll
+*.pdb
+
+# Intermediate
+*.obj
+*.res
+*.ilk
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Dependencies (if not source-included)
+# Note: pugixml is included in repo
+third_party/
+external/
+
+# Local config (DO NOT commit)
+RowaPickupMaui.config
+*.local.config
+*.secrets.ini
+
+# Logs
+*.log
+Protocol/
+protocol/
+
+# Temporary
+temp/
+tmp/
+*.tmp

@@ -1,0 +1,69 @@
+; English.lng - English language strings for RowaPickupSlim
+; Format: KEY=VALUE
+
+; Connection status
+STR_CONNECTED=Connected
+STR_NOT_CONNECTED=Not connected
+STR_TITLE_CONNECTED=Connected
+STR_DEVICES_TITLE=Equipment
+STR_DEVICE_STATE=State
+STR_MOSAIC_READY=Ready
+STR_MOSAIC_INACTIVE=Inactive
+
+; UI Controls
+STR_SEARCH_PLACEHOLDER=Search...
+STR_REFRESH_BUTTON=Refresh
+STR_SETTINGS_BUTTON=Settings
+STR_OUTPUT_BUTTON=Output
+STR_EXIT_BUTTON=Exit
+
+; Column headers
+STR_COL_QUANTITY=Quantity
+STR_COL_ARTICLE=Article
+
+; Status messages
+STR_OUR_REQUEST_LOADING=Our request is being picked...
+STR_OTHER_REQUEST_LOADING=Another request is being picked...
+STR_PICKER_LOADING=Picker is loading...
+STR_PICKER_FAILED=Picker could not be loaded
+STR_PICKER_PARTIAL=Picked
+STR_PICKER_PARTIAL_FULL=Picked: {0} / {1} packages
+
+; Dialogs
+STR_CONFIRM_OUTPUT=Send output request for {0} ({1} packages)?
+STR_CONFIRM_OUTPUT_TITLE=Confirmation
+STR_SETTINGS_TITLE=RowaPickup Settings
+STR_SETTINGS_SAVED=Settings saved successfully!
+STR_SETTINGS_SAVED_TITLE=Success
+STR_NO_ARTICLE_SELECTED=No article selected or no packages available.
+STR_NO_ARTICLE_INFO=Info
+
+; Settings dialog
+STR_SETTINGS_IP_ADDRESS=IP Address:
+STR_SETTINGS_PORT=Port:
+STR_SETTINGS_STOCK_LOCATION=Stock Location:
+STR_SETTINGS_SCAN_OUTPUT=Enable barcode scanning
+STR_SETTINGS_OUTPUT_NUMBER=Output Number:
+STR_SETTINGS_READ_SPEED=Read Speed (ms):
+STR_SETTINGS_PRIORITY=Priority:
+STR_SETTINGS_LANGUAGE=Language:
+STR_SETTINGS_SAVE=Save
+STR_SETTINGS_CLOSE=Close
+
+; Priority options
+STR_PRIORITY_LOWEST=Lowest
+STR_PRIORITY_LOW=Low
+STR_PRIORITY_NORMAL=Normal
+STR_PRIORITY_HIGH=High
+STR_PRIORITY_HIGHEST=Highest
+
+; Right-click menu
+STR_MENU_SETTINGS=Settings
+STR_MENU_OUTPUT_SELECTED=Output selected Pickup
+STR_MENU_REFRESH_STOCK=Refresh Stock
+STR_MENU_EXIT=Exit
+
+; File menu
+STR_FILE_MENU=File
+STR_FILE_SETTINGS=&Settings
+STR_FILE_EXIT=E&xit

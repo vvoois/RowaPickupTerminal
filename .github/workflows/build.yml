@@ -1,0 +1,37 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        platform: [x64]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      with:
+        msbuild-version: latest
+
+    - name: Restore NuGet packages
+      run: nuget restore RowaPickupSlim.sln
+
+    - name: Build
+      run: msbuild RowaPickupSlim.sln /p:Configuration=${{ matrix.configuration }} /p:Platform=${{ matrix.platform }}
+
+    - name: Upload artifacts
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: RowaPickupSlim-${{ matrix.platform }}-${{ matrix.configuration }}
+        path: ${{ matrix.platform }}/${{ matrix.configuration }}/RowaPickupSlim.exe
